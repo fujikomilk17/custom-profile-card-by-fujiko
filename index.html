@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc_HG7CrQlI3he1uddZtKt7vII_j2CGPEDFQ&usqp=CAU">
+	<title>2</title>
+	<style>
+		*,*:before,*:after {
+			-webkit-tap-highlight-color: transparent
+		}
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: arial;
+		}
+		.cover {
+			width: 100%;
+			height: 100vh;
+			background-color: #2C3639;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			perspective: 500px;
+		}
+		.content {
+			width: 300px;
+			overflow: hidden;
+			height: 200px;
+			background-color: #3F4E4F;
+			border-radius: 10px;
+			position: relative;
+			box-shadow: 0 0 8px rgba(0,0,0 , .3);
+			transform: rotateX(45deg);
+			animation: anim 1.5s ease-out forwards;
+		}
+		@keyframes anim {
+			to {
+				transform: rotateX(0deg);
+				height: 500px;
+			}
+		}
+		.img {
+			width: 100%;
+			height: 140px;
+			text-align: center;
+			margin-top: 10px;
+			background-color: transparent;
+		}
+		.img img {
+			width: 130px;
+			height: 130px;
+			border-radius: 10px;
+		}
+		.link {
+			width: 100%;
+			background-color: transparent;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: space-around;
+
+		}
+		.link a {
+			width: 80%;
+			height: 45px;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			cursor: pointer;
+			border-radius: 5px;
+			color: white;
+			transition: all .3s;
+			letter-spacing: 1px;
+			animation: anim2 1s 1.6s ease-in forwards;
+		}
+		@keyframes anim2 {
+			to {
+				margin: 5px 0;
+			}
+		}
+		.link a:last-child, .link a:last-child:hover {
+			background-color: rgba(255,255,255, .2);
+			border: none;
+		}
+
+		.link a img {
+			width: 30px;
+			margin: 0 20px 0 20px;
+			transition: .3s;
+		}
+		.link a:hover:not(:last-child) {
+			border: 2px solid black;
+			width: 90%;
+			text-transform: uppercase;
+			background-color: rgba(255,255,255, .06);
+		}
+		.link a:hover img {
+			margin: 0 30px 0 30px;
+		}
+		h1{
+			position: absolute;
+			bottom: 10px;
+			font-weight: bold;
+			font-size: 8px;
+			letter-spacing: 3px;
+			color: rgba(255,255,255, .5);
+		}
+	</style>
+</head>
+<body>
+	<div class="cover">
+		<div class="content">
+			<div class="img" >
+				<img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073552960115707954/20230122_084336.png" alt="" id="pp">
+			</div>
+			<div class="link">
+				<a href="https://www.instagram.com/ha_ki_04" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526224376299600/instagram.png" alt="">Instagram</a>
+				<a href="https://m.youtube.com/@hakitrue" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526226083381288/youtube.png" alt="">Youtube</a>
+				<a href="https://www.tiktok.com/@hakiajiman6" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526225844326482/tiktok.png" alt="">Tiktok</a>
+				<a href="https://github.com/Haki04" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526224154021908/github.png" alt="">Github</a>
+				<a href="https://haki04.github.io/Project/link_tree.html" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526224623771648/link.png" alt="">Link Tree</a>
+				<a href="pesan.html" target="_blank"><img src="https://cdn.discordapp.com/attachments/1073525739065966614/1073526223914934282/envelope.png" alt="">Pesan dari tuhan</a>
+			</div>
+		</div>
+		<h1>Dibuat oleh Fujiko.404</h1>
+	</div>
+	
+	<script>
+		const img = document.getElementById("pp")
+		const srcpp = ["https://cdn.discordapp.com/attachments/1073525739065966614/1073552960115707954/20230122_084336.png", "https://cdn.discordapp.com/attachments/1073525739065966614/1073552960115707954/20230122_084336.png"]
+		let ppnmr = 1
+		setInterval(()=> {
+			if (ppnmr > srcpp.length - 1) {
+				ppnmr = 0
+			}
+			img.src = srcpp[ppnmr]
+			ppnmr++
+		}, 4000)
+		
+	</script>
+</body>
+</html>
